@@ -1,28 +1,9 @@
-#+TITLE:     Minimal Zsh configuration
-#+AUTHOR:    Kebairia Zakaria
-#+EMAIL:     4.kebairia@gmail.com
-#+LANGUAGE:  en
-#+PROPERTY:  header-args :results none :tangle ./zshrc
-* Info
-** Mesure startup time:
-~time zsh -i -c echo~ 
-~-i~ : force shell to be interactive
-~-c~ : take the first argument as a command to execute
-** Enabling profiling
-zsh has a builtin profiler to profile startup time usage. 
-It is called *zprof* and can be enabled by adding ~zmodload zsh/zprof~ 
-to the top and ~zprof~ to the bottom of your ~/.zshrc~.
-* Source files
-#+begin_src shell 
 source "$XDG_CONFIG_HOME/misc/aliases"
 source "$XDG_DATA_HOME/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 if [ -x "$(command -v dircolors)" ]; then
     eval "$(dircolors -b ${XDG_CONFIG_HOME}/misc/dir-colors)"
 fi
-#+end_src
-* Completion
-Executes commands at the start of an interactive session.
-#+begin_src shell
+
 ## menu-style
 zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
@@ -38,17 +19,13 @@ zstyle ':completion:*' rehash true
 #zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # use completion cache
 zstyle ':completion::complete:*' use-cache true
-#+end_src
-** Keybinding
-#+begin_src shell
+
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
-#+end_src
-* Shell options
-#+begin_src shell
+
 setopt PROMPT_PERCENT
 setopt PROMPT_SUBST
 # history config
@@ -72,10 +49,7 @@ setopt HIST_REDUCE_BLANKS
 #setopt CORRECT_ALL
 # use emacs bindings
 set -o emacs
-#+end_src
-* Prompt
-[[file:img/prompt.png]]
-#+begin_src shell
+
 PROMPT='%b%F{#0b98de}%~ %f
 %? %F{#fd9014}%(!.#.>) %f'
 autoload -Uz vcs_info
@@ -90,12 +64,9 @@ zstyle ':vcs_info:git:*' formats '[%F{green}%b%f%c%u]'
 zstyle ':vcs_info:git:*' actionformats '[%F{cyan}%b (%a)%f%c%u]'
 
 RPROMPT='$vcs_info_msg_0_'
-#+end_src
-* Plugins
-#+begin_src shell
+
 #auto suggestions
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 set ZSH_AUTOSUGGEST_USE_ASYNC=true
 #fast syntax highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-#+end_src
