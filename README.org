@@ -10,7 +10,6 @@ zsh has a builtin profiler to profile startup time usage.
 It is called *zprof* and can be enabled by adding ~zmodload zsh/zprof~ 
 
 to the top and ~zprof~ to the bottom of your ~/.zshrc~.
-=======================================
 * source files
 #+begin_src shell 
 ## SOURCE FILES
