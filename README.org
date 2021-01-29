@@ -6,11 +6,13 @@
 * Info
 ** Mesure startup time:
 ~time zsh -i -c echo~ 
-~-i~ : force shell to be interactive
-~-c~ : take the first argument as a command to execute
+- ~-i~ : force shell to be interactive
+- ~-c~ : take the first argument as a command to execute
 ** Enabling profiling
 zsh has a builtin profiler to profile startup time usage. 
+
 It is called *zprof* and can be enabled by adding ~zmodload zsh/zprof~ 
+
 to the top and ~zprof~ to the bottom of your ~/.zshrc~.
 * Source files
 #+begin_src shell 
