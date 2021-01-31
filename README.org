@@ -3,6 +3,7 @@
 #+EMAIL:     4.kebairia@gmail.com
 #+LANGUAGE:  en
 #+PROPERTY:  header-args :results none :tangle ./zshrc
+[[file:logo.png]]
 * Info
 ** Mesure startup time:
 ~time zsh -i -c echo~ 
