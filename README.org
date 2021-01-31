@@ -15,6 +15,10 @@ It is called *zprof* and can be enabled by adding ~zmodload zsh/zprof~
 
 to the top and ~zprof~ to the bottom of your ~/.zshrc~.
 * Source files
+import your file here ,i have three different file:
+- *aliases*: the file that contain all my aliases
+- *dir-colors*: this file contain really big list of all possible file type with different colors for each category.
+- *gruvbox_256palette.sh*: this file correct the colors of *gruvbox* in my terminal.
 #+begin_src shell 
 source "$XDG_CONFIG_HOME/misc/aliases"
 source "$XDG_DATA_HOME/nvim/plugged/gruvbox/gruvbox_256palette.sh"
@@ -41,7 +45,7 @@ zstyle ':completion:*' rehash true
 # use completion cache
 zstyle ':completion::complete:*' use-cache true
 #+end_src
-** Keybinding
+* Keybinding
 #+begin_src shell
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^[[A' up-line-or-search
@@ -76,6 +80,7 @@ setopt HIST_REDUCE_BLANKS
 set -o emacs
 #+end_src
 * Prompt
+- what i need is a /clean,minimal and elegant prompt/ without all the junk and useless info about everything clutter in front of me.
 [[file:img/prompt.png]]
 #+begin_src shell
 PROMPT='%b%F{#0b98de}%~ %f
