@@ -3,6 +3,7 @@
 #+EMAIL:     4.kebairia@gmail.com
 #+LANGUAGE:  en
 #+PROPERTY:  header-args :results none :tangle ./zshrc
+[[file:logo.png]]
 * Info
 ** Mesure startup time:
 ~time zsh -i -c echo~ 
@@ -80,7 +81,7 @@ setopt HIST_REDUCE_BLANKS
 set -o emacs
 #+end_src
 * Prompt
-- what i need is a /clean,minimal and elegant prompt/ without all the junk and useless info about everything clutter in front of me.
+- what i need is a /clean,minimal and elegant/ prompt without all the junk and useless info about everything clutter in front of me.
 [[file:img/prompt.png]]
 #+begin_src shell
 PROMPT='%b%F{#0b98de}%~ %f
