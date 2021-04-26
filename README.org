@@ -20,6 +20,14 @@ import your file here ,i have three different file:
 - *aliases*: the file that contain all my aliases
 - *dir-colors*: this file contain really big list of all possible file type with different colors for each category.
 - *gruvbox_256palette.sh*: this file correct the colors of *gruvbox* in my terminal.
+- *PS*: All variables are in the ~zshenv~ file, and these are the most important ones:
+  - *XDG_CONFIG_HOME*: ~$HOME/.config~
+  - *XDG_CACHE_HOME*: ~$HOME/.cache~
+  - *XDG_DATA_HOME*: ~$HOME/.local/share~
+  - *XDG_BIN_HOME*: ~$HOME/.local/bin~
+  - *XDG_LIB_HOME*: ~$HOME/.local/lib~
+  - *XDG_TMP_HOME*: ~$HOME/.local/tmp~
+
 #+begin_src shell 
 source "$XDG_CONFIG_HOME/misc/aliases"
 source "$XDG_DATA_HOME/nvim/plugged/gruvbox/gruvbox_256palette.sh"
