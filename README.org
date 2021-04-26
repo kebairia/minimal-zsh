@@ -115,3 +115,4 @@ set ZSH_AUTOSUGGEST_USE_ASYNC=true
 #fast syntax highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 #+end_src
+- *PS*: The whole list of the environment variables are in the ~zshenv~ file, and these are the most important ones:
