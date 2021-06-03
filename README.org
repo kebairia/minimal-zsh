@@ -14,7 +14,7 @@ zsh has a builtin profiler to profile startup time usage.
 
 It is called *zprof* and can be enabled by adding ~zmodload zsh/zprof~ 
 
-to the top and ~zprof~ to the bottom of your ~/.zshrc~.
+at the top and ~zprof~ at the bottom of your ~/.zshrc~.
 * Source files
 import your file here ,i have three different file:
 - *aliases*: the file that contain all my aliases
@@ -89,7 +89,7 @@ setopt HIST_REDUCE_BLANKS
 set -o emacs
 #+end_src
 * Prompt
-- what i need is a /clean,minimal and elegant/ prompt without all the junk and useless info about everything clutter in front of me.
+- what i need is a /clean,minimal and elegant/ prompt without all the junk and useless info (about everything) clutter in front of me.
 [[file:img/prompt.png]]
 #+begin_src shell
 PROMPT='%b%F{#0b98de}%~ %f
